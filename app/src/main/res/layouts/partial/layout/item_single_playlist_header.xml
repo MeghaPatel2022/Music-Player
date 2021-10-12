@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="16dp"
+    tools:background="#000">
+
+    <RelativeLayout
+        android:id="@+id/rlIcon"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/background_img"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_button">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/icon"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:background="@drawable/image_background"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="8dp"
+            tools:src="@drawable/ic_default_image" />
+
+        <View
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:background="@drawable/background_img" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_imgplayicon" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_as_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="32dp"
+        android:textColor="#4f4f4f"
+        android:visibility="gone"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/rlIcon"
+        app:layout_constraintEnd_toEndOf="@id/rlIcon"
+        app:layout_constraintStart_toStartOf="@id/rlIcon"
+        app:layout_constraintTop_toTopOf="@id/rlIcon"
+        tools:text="G" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/helvetica_light"
+        android:maxLines="2"
+        android:textAllCaps="true"
+        android:textColor="@color/FlatWhite"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlIcon"
+        app:layout_constraintTop_toTopOf="@id/rlIcon"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/this_is_name_of_the_song" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/helvetica"
+        android:maxLines="2"
+        android:textColor="#FD2EAD"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/rlIcon"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="@string/this_is_artist_of_the_song" />
+
+    <ImageView
+        android:id="@+id/menu_button"
+        android:layout_width="48dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:textSize="13sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_vert_black_24dp"
+        app:tint="@color/FlatWhite" />
+
+    <View
+        android:id="@+id/play_all_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_effect_10dp_radius"
+        app:layout_constraintBottom_toBottomOf="@id/play_all_icon"
+        app:layout_constraintEnd_toEndOf="@id/play_all_button"
+        app:layout_constraintStart_toStartOf="@id/play_all_icon"
+        app:layout_constraintTop_toTopOf="@id/play_all_button" />
+
+    <ImageView
+        android:id="@+id/play_all_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/play_all_button"
+        app:srcCompat="@drawable/ic_yellowplay" />
+
+    <TextView
+        android:id="@+id/play_all_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="14dp"
+        android:text="@string/play_all_songs"
+        android:textColor="#F0B800"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/play_all_icon"
+        app:layout_constraintTop_toBottomOf="@id/rlIcon" />
+
+    <View
+        android:id="@+id/play_shuffle_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ripple_effect_10dp_radius"
+        app:layout_constraintBottom_toBottomOf="@id/play_shuffle_icon"
+        app:layout_constraintEnd_toEndOf="@id/shuffle_play_button"
+        app:layout_constraintStart_toStartOf="@id/play_shuffle_icon"
+        app:layout_constraintTop_toTopOf="@id/shuffle_play_button" />
+
+    <ImageView
+        android:id="@+id/play_shuffle_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/play_all_button"
+        app:layout_constraintStart_toStartOf="@+id/play_all_button"
+        app:layout_constraintTop_toTopOf="@id/shuffle_play_button"
+        app:srcCompat="@drawable/ic_shuffle" />
+
+    <TextView
+        android:id="@+id/shuffle_play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="14dp"
+        android:text="@string/action_shuffle_all"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/play_shuffle_icon"
+        app:layout_constraintTop_toBottomOf="@id/rlIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

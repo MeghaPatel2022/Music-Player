@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="20dp"
+    tools:background="@color/background_panel_color">
+
+    <ImageView
+        android:id="@+id/toggle"
+        android:layout_width="35dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/slide_up_down_icon_drawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/by_title_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ripple_16dp_translucent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/title"
+        android:textColor="@color/md_bottom_sheet_text_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggle" />
+
+    <ImageView
+        android:id="@+id/icon_by_title"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@drawable/alphabet"
+        app:layout_constraintBottom_toBottomOf="@id/by_title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/by_title_text" />
+
+    <TextView
+        android:id="@+id/last_added_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ripple_16dp_transparent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/time_added"
+        android:textColor="@color/md_bottom_sheet_text_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/by_title_text" />
+
+    <ImageView
+        android:id="@+id/icon_last_added"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="13dp"
+        android:src="@drawable/date"
+        app:layout_constraintBottom_toBottomOf="@id/last_added_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/last_added_text" />
+
+    <TextView
+        android:id="@+id/most_played_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ripple_16dp_transparent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/favorite"
+        android:textColor="@color/md_bottom_sheet_text_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_added_text" />
+
+    <ImageView
+        android:id="@+id/icon_most_played"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="12dp"
+        android:src="@drawable/star_sort"
+        app:layout_constraintBottom_toBottomOf="@id/most_played_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/most_played_text" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="#66333333"
+        app:layout_constraintEnd_toEndOf="@id/by_title_text"
+        app:layout_constraintStart_toStartOf="@id/by_title_text"
+        app:layout_constraintTop_toBottomOf="@id/most_played_text" />
+
+    <TextView
+        android:id="@+id/asc_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ripple_16dp_translucent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/asc"
+        android:textColor="@color/md_bottom_sheet_text_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <ImageView
+        android:id="@+id/icon_asc"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="13dp"
+        android:src="@drawable/up_asc"
+        app:layout_constraintBottom_toBottomOf="@id/asc_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/asc_text" />
+
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ripple_16dp_transparent"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/desc"
+        android:textColor="@color/md_bottom_sheet_text_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/asc_text" />
+
+    <ImageView
+        android:id="@+id/icon_desc"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="13dp"
+        android:rotation="180"
+        android:src="@drawable/up_asc"
+        app:layout_constraintBottom_toBottomOf="@id/desc_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/desc_text" />
+
+    <ImageView
+        android:id="@+id/by_title_tick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:src="@drawable/tick"
+        app:layout_constraintEnd_toEndOf="@id/by_title_text"
+        app:layout_constraintTop_toTopOf="@id/by_title_text" />
+
+    <ImageView
+        android:id="@+id/by_time_tick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/by_title_text"
+        app:layout_constraintTop_toTopOf="@id/last_added_text" />
+
+    <ImageView
+        android:id="@+id/most_played_tick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/by_title_text"
+        app:layout_constraintTop_toTopOf="@id/most_played_text" />
+
+    <ImageView
+        android:id="@+id/asc_tick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:src="@drawable/tick"
+        app:layout_constraintEnd_toEndOf="@id/by_title_text"
+        app:layout_constraintTop_toTopOf="@id/asc_text" />
+
+    <ImageView
+        android:id="@+id/desc_tick"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="15dp"
+        android:src="@drawable/tick"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/by_title_text"
+        app:layout_constraintTop_toTopOf="@id/desc_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
